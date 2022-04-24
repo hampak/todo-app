@@ -1,0 +1,73 @@
+.item-container {
+	height: 3.75rem;
+	width: 100%;
+	background-color: #dbdfff;
+	display: flex;
+	align-items: center;
+	padding-bottom: 3px;
+	
+	&:nth-child(odd) {
+		background-color: #b4bccf;
+	}
+	
+	.checkbox-text-container {
+		display: flex;
+		align-items: center;
+		
+		margin-left: 0.5rem;
+		cursor: pointer;
+		
+		svg {
+			font-size: 1.125rem;
+			color: #3254a1;
+		}
+	}
+	
+	.todo-text {
+		height: 100%;
+		margin-left: 1rem;
+		font-size: 1rem;
+		display: flex;
+		align-items: center;
+		flex: 1;
+		margin-right: auto;
+		overflow-x: auto;
+		
+		&.checked {
+			color: #7a7878;
+			text-decoration: line-through;
+		}
+	}
+	
+	.remove-container {
+		display: flex;
+		align-items: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		cursor: pointer;
+		
+		svg {
+			font-size: 1.125rem;
+			color: red;
+		}
+		
+		&:hover {
+			svg {
+				color: #ff5252;
+			}
+		}
+	}
+	
+	& + & {
+		border-bottom: 1px solid #9b9c9e;
+	}
+	
+  ::-webkit-scrollbar {
+		height: 5px;
+	}
+
+  ::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #486ab8;
+	}
+}
